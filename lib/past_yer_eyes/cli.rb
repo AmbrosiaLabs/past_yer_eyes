@@ -15,6 +15,9 @@ module PastYerEyes
       logfile_name = options[:log_name]
       session_file = options[:session]
 
+      fail "#{session_file} does not exist" unless File.exist?(session_file)
+      fail "#{logfile_name} does not exist" unless File.exist?(logfile_name)
+
       ::PastYerEyes::LogParser.parse(session_file, logfile_name, spreadsheet_name)
     end
 
