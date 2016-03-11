@@ -1,6 +1,4 @@
 require "json"
-require "pry"
-require "awesome_print"
 
 module PastYerEyes
   class LogParser
