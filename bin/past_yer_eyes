@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require 'past_yer_eyes'
+
+PastYerEyes::CLI.start(ARGV)
