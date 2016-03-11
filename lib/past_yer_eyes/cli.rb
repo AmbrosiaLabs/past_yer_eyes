@@ -4,6 +4,11 @@ module PastYerEyes
   class CLI < Thor
     desc "parse_logs", "Parse Batch Reports and create a Google sheet"
     long_desc <<-DESC
+    past_yer_eyes OPTIONS:
+
+      -l, --log_file=PASTEURIZATION_LOG_FILE, :default => "pasteurization.json"
+      -s, --sheet_name=SPREADSHEET_NAME, :default => "Pasteurization Batches CURRENT_TIME"
+      -e, --session=SESSION_FILE, :default => "session.json"
     DESC
 
     option :log_name, :type => :string, :default => "./pasteurization.json", :aliases => "-l"
